@@ -22,7 +22,7 @@ export const login = async (req, res, next) => {
   }
 };
 
-export const register = async (req, res) => {
+export const register = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
 
@@ -42,7 +42,7 @@ export const register = async (req, res) => {
 
 export const getMyProfile = (req, res) => {
   res.status(200).json({
-    sucess: true,
+    success: true,
     user: req.user,
   });
 };
@@ -57,6 +57,6 @@ export const logout = (req, res) => {
     })
     .json({
       sucess: true,
-      message: "Logout Successfully",
+      message: "Loged Out Successfully",
     });
 };

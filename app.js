@@ -30,5 +30,5 @@ app.get("/", (req, res) => {
   res.send("Hey there");
 });
 
-// useing Error Middleware
+// using Error Middleware
 app.use(errorMiddleware);
